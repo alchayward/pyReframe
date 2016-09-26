@@ -1,7 +1,6 @@
 from pyReframe.interceptors import execute
 
 
-
 def flatten_and_remove_nones(interceptors):
     ints = []
     for i in interceptors:

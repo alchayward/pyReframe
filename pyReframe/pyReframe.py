@@ -1,6 +1,6 @@
 from pyrsistent import pmap
 from pyReframe.std_interceptors import import_std_interceptors
-from pyReframe.fx import import_fx
+from pyReframe.fx import import_fx, dispatch_fn
 from pyReframe.cofx import import_cofx
 from pyReframe.events import register_event_fn, event_handler_fn
 from rx.subjects import Subject
@@ -14,6 +14,7 @@ class Reframe(object):
         # event queue
         self.event_stream = Subject()  # blinker.Signal()
         self.event_handler = self.event_stream.subscribe(event_handler_fn(self))
+        self.dispatch = dispatch_fn(self)
 
         # registries: I may want to move these into a combined registry structure, with a registration function...
         self.fx = dict()
