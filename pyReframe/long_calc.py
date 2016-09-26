@@ -1,5 +1,5 @@
 from pyrsistent import pmap, discard
-from interceptors import update_effects, update_coeffects
+from pyReframe.interceptors import update_effects, update_coeffects
 import asyncio
 
 

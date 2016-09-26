@@ -1,10 +1,10 @@
 import pyrsistent as pr
-from std_interceptors import import_std_interceptors
-from fx import import_fx
-from cofx import import_cofx
-from events import register_event_fn, event_handler_fn
+from pyReframe.std_interceptors import import_std_interceptors
+from pyReframe.fx import import_fx
+from pyReframe.cofx import import_cofx
+from pyReframe.events import register_event_fn, event_handler_fn
 from rx.subjects import Subject
-from subs import register_sub_fn, register_db, RAtom
+from pyReframe.subs import register_sub_fn, register_db, RAtom
 
 
 class Reframe(object):

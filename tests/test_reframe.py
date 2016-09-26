@@ -1,4 +1,4 @@
-from pyReframe import Reframe
+from pyReframe.pyReframe import Reframe
 from unittest import TestCase, TestLoader
 from pyrsistent import pmap, inc
 

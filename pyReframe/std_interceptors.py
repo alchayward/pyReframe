@@ -1,7 +1,7 @@
-from interceptors import update_effects, update_coeffects
-from cofx import cofx_injector
+from pyReframe.interceptors import update_effects, update_coeffects
+from pyReframe.cofx import cofx_injector
 from pyrsistent import discard, pmap, inc
-from helper_tools import update_in, get_in
+from pyReframe.helper_tools import update_in, get_in
 
 
 def do_fx_interceptor(frame):

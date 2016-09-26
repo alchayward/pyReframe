@@ -1,4 +1,4 @@
-from interceptors import execute
+from pyReframe.interceptors import execute
 
 
 

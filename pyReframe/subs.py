@@ -1,5 +1,5 @@
 from rx.subjects import Subject
-from helper_tools import to_list
+from pyReframe.helper_tools import to_list
 
 
 class RAtom(object):

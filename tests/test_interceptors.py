@@ -1,4 +1,4 @@
-from interceptors import new_context
+from pyReframe.interceptors import new_context
 from pyrsistent import pmap, pvector
 # from py_reframe import Reframe
 from unittest import TestCase, TestLoader

@@ -1,4 +1,4 @@
-from helper_tools import update_in
+from pyReframe.helper_tools import update_in
 
 
 def cofx_injector(frame):
