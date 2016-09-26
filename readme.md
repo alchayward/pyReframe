@@ -9,8 +9,12 @@ A python port of reframe from clojure.
 ## How:
 Instead of a single library, we acutally have a reframe object, which instanticates the database, and methods.
 ```
-from pyReframe import Reframe
-R = Reframe()
+from pyReframe import Reframe, pmap
+from pyrsistent import pmap
+
+# instantiate a reframe object
+R = Reframe(db=)
+
 
 ```
 

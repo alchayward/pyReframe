@@ -1,4 +1,4 @@
-import pyrsistent as pr
+from pyrsistent import pmap
 from pyReframe.std_interceptors import import_std_interceptors
 from pyReframe.fx import import_fx
 from pyReframe.cofx import import_cofx
@@ -8,7 +8,7 @@ from pyReframe.subs import register_sub_fn, register_db, RAtom
 
 
 class Reframe(object):
-    def __init__(self, db=pr.pmap()):
+    def __init__(self, db=pmap()):
         self.db = RAtom(db)
 
         # event queue

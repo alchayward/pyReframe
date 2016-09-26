@@ -9,4 +9,4 @@ setup(
     license='',
     author='Andrew L. C. Hayward',
     author_email='alc.hayward@gmail.com',
-    description='a port of clojures reframe to python')
+    description='a port of clojures reframe to python', requires=['pyrsistent', 'rx'])
