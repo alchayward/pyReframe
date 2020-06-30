@@ -1,4 +1,4 @@
-from rx.subjects import Subject
+from rx.subject import Subject
 from pyReframe.helper_tools import to_list
 
 

@@ -3,7 +3,7 @@ from pyReframe.std_interceptors import import_std_interceptors
 from pyReframe.fx import import_fx, dispatch_fn
 from pyReframe.cofx import import_cofx
 from pyReframe.events import register_event_fn, event_handler_fn
-from rx.subjects import Subject
+from rx.subject import Subject
 from pyReframe.subs import register_sub_fn, register_db, RAtom
 
 
