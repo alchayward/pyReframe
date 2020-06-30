@@ -3,6 +3,11 @@ from pyReframe.helper_tools import to_list
 
 
 class RAtom(object):
+    """
+    Approximation to a clojure atom.
+    calling = dereferencing
+
+    """
     def __init__(self, initial_value=None):
         self.subject = Subject()
         self.stream = self.subject.distinct_until_changed()
@@ -12,13 +17,22 @@ class RAtom(object):
         def change_value(v):
             self.value = v
 
-        self.stream.subscribe(change_value)
+        self.stream.subscribe(lambda v:  self.reset(v))
+
+    def swap(self, new_value):
+        v = self.value
+        self.reset(new_value)
+        return v
 
     def reset(self, new_value):
         self.subject.on_next(new_value)
 
     def dereference(self):
         return self.value
+
+    def __call__(self, *args, **kwargs):
+        return self.dereference()
+
 
 
 def reaction(source_atoms, fn):
